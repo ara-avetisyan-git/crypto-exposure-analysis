@@ -1,0 +1,5 @@
+address,source,category
+ADDR_SANCTIONED_1,sanctions list (fictional),sanctioned
+ADDR_MIXER_1,mixing service (fictional),mixer
+ADDR_SCAM_1,reported scam (fictional),scam
+ADDR_EXCHANGE_1,regulated exchange (fictional),exchange

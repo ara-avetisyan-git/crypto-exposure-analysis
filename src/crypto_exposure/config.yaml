@@ -1,0 +1,31 @@
+# Illustrative parameters. Category weights express how much a unit of funds from that
+# category contributes to an address's exposure score (0-100).
+categories:
+  sanctioned: 1.0
+  ransomware: 1.0
+  darknet_market: 0.9
+  scam: 0.9
+  mixer: 0.7
+  gambling: 0.3
+  exchange: 0.0
+
+# Custodial services: their outgoing funds are pooled, so tracing stops there.
+reset_categories: [exchange]
+
+analysis:
+  max_hops: 6
+  medium_score: 10      # exposure score from which an address is at least "medium"
+  high_score: 50        # exposure score from which an address is "high"
+  medium_hops: 2        # being this close to a risky address makes it at least "medium"
+
+typologies:
+  peeling_chain:
+    main_share: 0.8     # the main output carries at least this share of the transaction
+    min_chain: 4        # number of consecutive peeling transactions
+  fan:
+    min_counterparties: 5
+    window_hours: 24
+  rapid_forwarding:
+    share: 0.95
+    window_hours: 6
+    min_amount: 1
